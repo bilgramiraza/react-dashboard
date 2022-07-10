@@ -4,11 +4,16 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import { useNavigate } from "react-router-dom";
 
-function Setpassword() {
+function OTP() {
+  let navigate = useNavigate();
+  const verifyOTP = (e) =>{
+    navigate('/SetPassword');
+  }
   return (
     <Container>
-      <Form className='mx-auto'>
+      <Form className='mx-auto' onSubmit={verifyOTP}>
         <Form.Group as={Row} className="mb-3" controlId="userName">
           <Form.Label column sm="2">
             Enter Email
@@ -27,10 +32,10 @@ function Setpassword() {
             <Form.Control type="number" placeholder="OTP Here" />
           </Col>
         </Form.Group>
-        <Button variant="primary">Verify</Button>
+        <Button type="submit" variant="primary">Verify</Button>
       </Form>
     </Container>
   )
 }
 
-export default Setpassword
+export default OTP;
