@@ -16,7 +16,7 @@ function SetPassword() {
       <Form onSubmit={setpassword}>
         <Form.Group as={Row} className="mb-3" controlId="pwd">
           <Form.Label column sm="2">
-            Email
+            New Password
           </Form.Label>
           <Col sm="10">
             <Form.Control type="password" />
@@ -25,7 +25,7 @@ function SetPassword() {
 
         <Form.Group as={Row} className="mb-3" controlId="confirmPwd">
           <Form.Label column sm="2">
-            Confirm Password
+            Confirm New Password
           </Form.Label>
           <Col sm="10">
             <Form.Control type="password"/>
