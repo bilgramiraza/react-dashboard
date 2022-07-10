@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 function Register() {
   let navigate = useNavigate();
   const setPassword = (e) =>{
-    navigate('/Setpassword');
+    navigate('/otp');
   }
   return (
     <Container>

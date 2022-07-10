@@ -3,7 +3,8 @@ import './App.css';
 import Login from './components/Login.js';
 import Register from './components/Register.js';
 import Dashboard from './components/Dashboard.js';
-import Setpassword from "./components/Setpassword";
+import OTP from "./components/OTP";
+import SetPassword from "./components/SetPassword";
 
 
 export default function App() {
@@ -13,8 +14,9 @@ export default function App() {
         <Route path="/" element={<Login />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/otp" element={<OTP />} />
+        <Route path="/SetPassword" element={<SetPassword />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/Setpassword" element={<Setpassword />} />
       </Routes>
     </BrowserRouter>
   );
