@@ -4,12 +4,14 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from "react-router-dom";
+import { useSelector } from 'react-redux';
 
 function Register() {
   let navigate = useNavigate();
   const setPassword = (e) =>{
     navigate('/otp');
   }
+  console.log(useSelector((store)=>{console.log(store)}));
   return (
     <Container>
       <Form onSubmit={setPassword}>
