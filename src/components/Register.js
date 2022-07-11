@@ -1,6 +1,9 @@
 import React from 'react'
 import { useNavigate } from "react-router-dom";
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+
+import { userRegister } from '../features/user/userSlice';
 
 import Container from 'react-bootstrap/Container';
 import InputGroup from 'react-bootstrap/InputGroup';
@@ -9,6 +12,7 @@ import Button from 'react-bootstrap/Button';
 
 function Register() {
   let navigate = useNavigate();
+  let dispatch = useDispatch();
 
   const getUserInfo = (e) =>{
     if(email&&firstName&&lastName&&mobileNo&&tandc){
@@ -16,14 +20,16 @@ function Register() {
       console.log('FullName:'+firstName+' '+lastName);
       console.log('Mobile no:'+mobileNo);
       console.log('Terms and conditions:'+tandc);
+      dispatch(userRegister(email,firstName,lastName,mobileNo,tandc));
       setEmail('');
       setFirstName('');
       setLastName('');
       setMobileNo('');
       setTandC(false);
+      setPassword();
     }
   }
-  const setPassword = (e) =>{
+  const setPassword = () =>{
     navigate('/otp');
   }
   const [email,setEmail] = useState('');
