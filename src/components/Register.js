@@ -100,7 +100,12 @@ function Register() {
           />
         </Form.Group>
 
-        <Button variant="primary" type="button" onClick={getUserInfo}>
+        <Button 
+          variant="primary" 
+          type="button" 
+          onClick={getUserInfo}
+          disabled={!(email&&firstName&&lastName&&mobileNo&&tandc)}
+        >
           Submit
         </Button>
       </Form>
