@@ -12,7 +12,7 @@ const initialState = {
 const userSlice = createSlice({
   name:'user',
   initialState,
-  reducer:{
+  reducers:{
     userRegister:{
       reducer(state,action){
         state ={
